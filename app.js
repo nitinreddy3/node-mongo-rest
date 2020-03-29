@@ -11,7 +11,7 @@ const postsRoute = require('./routes/posts')
 //Middleware
 app.use(cors);
 app.use(bodyParser.json())
-app.use('/posts',postsRoute);
+app.use('/posts', postsRoute);
 
 //ROUTES
 app.get('/', (req, res) => {
@@ -19,8 +19,8 @@ app.get('/', (req, res) => {
 })
 
 //Connect to DB
-mongoose.connect(process.env.DB_CONNECTION, { 
-useNewUrlParser: true, useUnifiedTopology:true  
+mongoose.connect(process.env.DB_CONNECTION, {
+    useNewUrlParser: true, useUnifiedTopology: true
 }, () => {
     console.log("Connected to the DB")
 })
